@@ -9,7 +9,16 @@ connection = mysql.connector.connect(
 
 cursor = connection.cursor()
 
-#CRUD aqui
+#CRUD
+
+name_product = 'toddynho'
+value = 4
+
+#Create
+
+command = f'INSERT INTO Sales (product_name, value) VALUES ("{name_product}", {value})'
+cursor.execute(command)
+connection.commit() #edita banco de dados
 
 cursor.close()
 connection.close()
