@@ -20,5 +20,15 @@ command = f'INSERT INTO Sales (product_name, value) VALUES ("{name_product}", {v
 cursor.execute(command)
 connection.commit() #edita banco de dados
 
+#read
+
+command = f'SELECT * FROM Sales'
+cursor.execute(command)
+result = cursor.fetchall() #captura dados do BD
+print(result) # Tupla [(1, 'toddynho', 4), (2, 'nescau', 3)]
+
+
+
+
 cursor.close()
 connection.close()
