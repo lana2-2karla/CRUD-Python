@@ -1,3 +1,6 @@
+# Para conexão com BD fiz o download do driver do MYSQL e instalei a biblioteca connector para fazer a integração com o BD
+# Utilizei "pip install mysql-connector-python"
+
 import mysql.connector
 
 connection = mysql.connector.connect(
