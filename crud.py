@@ -11,8 +11,8 @@ cursor = connection.cursor()
 
 #CRUD
 
-name_product = 'toddynho'
-value = 4
+name_product = 'nescau'
+value = 8
 
 #Create
 
@@ -27,6 +27,11 @@ cursor.execute(command)
 result = cursor.fetchall() #captura dados do BD
 print(result) # Tupla [(1, 'toddynho', 4), (2, 'nescau', 3)]
 
+#update
+
+command = f'UPDATE Sales SET value = {value} WHERE product_name = "{name_product}"'
+cursor.execute(command)
+connection.commit() #edita banco de dados
 
 
 
