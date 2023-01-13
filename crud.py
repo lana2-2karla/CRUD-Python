@@ -11,8 +11,8 @@ cursor = connection.cursor()
 
 #CRUD
 
-name_product = 'nescau'
-value = 8
+name_product = 'toddynho'
+value = 4
 
 #Create
 
@@ -33,7 +33,11 @@ command = f'UPDATE Sales SET value = {value} WHERE product_name = "{name_product
 cursor.execute(command)
 connection.commit() #edita banco de dados
 
+#delete
 
+command = f'DELETE FROM Sales WHERE product_name = "{name_product}"'
+cursor.execute(command)
+connection.commit() #edita banco de dados
 
 cursor.close()
 connection.close()
